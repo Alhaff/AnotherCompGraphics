@@ -1,0 +1,32 @@
+﻿<Window x:Class="ComputerGraphics.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ComputerGraphics"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="MainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="Scene" Width="4*"/>
+            <ColumnDefinition x:Name="СontrolMenu" Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas Grid.Column="0" Width="{Binding Scene_ActualWidth}" 
+                    Height="{Binding Scene_ActualHeight}"
+                    Background="White">
+        </Canvas>
+        <TabControl Grid.Column="1" HorizontalAlignment="Center"
+                    Width="{Binding ControlMenu_ActualWidth}" 
+                    Height="{Binding ControlMenu_ActualHeight}">
+            <TabItem Header="Лінійні">
+                
+            </TabItem>
+            <TabItem Header="Афіні">
+                
+            </TabItem>
+            <TabItem Header="Проективні">
+                
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
