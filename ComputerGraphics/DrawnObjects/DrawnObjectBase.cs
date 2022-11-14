@@ -17,8 +17,9 @@ namespace ComputerGraphics.DrawnObjects
         public Color MyColor { get; set; } = Colors.Black;
         public bool IsPlaneTransformMe { get; set; } = true;
 
-        public Transformation TransformMe = p => p;
+        public event Transformation TransformMe = p => p;
 
+        protected Vector ApplyTransformMe(Vector vect) => TransformMe(vect);
         protected abstract IEnumerable<IEnumerable<Vector>> ObjectContourPoints();
 
         public IEnumerable<IEnumerable<Vector>> GetContourPoints()
